@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asquare | Premium Event Management</title>
+    <link rel="shortcut icon" href="" type="image/x-icon">
+    <!-- tailwind -->
+         <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+          <!-- flowbite -->
+           <link href="https://cdn.jsdelivr.net/npm/flowbite@4.0.1/dist/flowbite.min.css" rel="stylesheet" />
+
+          <!-- fontawesome -->
+           <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+           <!-- googlefonts -->
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montenegrin+Gothic+One&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&family=Raleway:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+<!-- css link  -->
+ <link rel="stylesheet" href="style.css">
+
+ <!-- animation  -->
+ <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+
+  <!-- aos  -->
+
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<style>
+    *{
+       font-family: "Open Sans", sans-serif;
+    }
+     
+</style>
+</head>
+<body>
+   <!--  NAVBAR  -->
+   <nav id="navbar" class="glass-nav fixed top-0 left-0 right-0 z-50" role="navigation" aria-label="Main navigation">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-[72px]">
+        <a href="index.html" class="flex items-center gap-2" aria-label="Asquare Events Home">
+          <span class="text-2xl font-display font-bold text-gradient">Asquare Events</span>
+        </a>
+
+        <div class="hidden md:flex items-center gap-8">
+          <a href="index.html" class="nav-link">Home</a>
+          <button id="dropdownNvbarButton" data-dropdown-toggle="dropdownNavbar" class="flex items-center justify-between w-full py-2 px-3 rounded text-heading md:w-auto hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0">
+            Services 
+            <svg class="w-4 h-4 ms-1.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+           <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 9-7 7-7-7"/>
+           </svg>
+           </button>
+           <!-- Dropdown menu -->
+           <div id="dropdownNavbar" class="z-10 hidden border bg-neutral-primary-medium rounded-base shadow-lg w-64">
+        <ul class="p-2 text-sm text-body font-medium" aria-labelledby="dropdownNvbarButton">
+         <li>
+           <a href="#" class="inline-flex items-center w-full p-2 hover:text-accent-gold hover:text-heading rounded">Birthday Partys</a>
+        </li>
+        <li>
+           <a href="#" class="inline-flex items-center w-full p-2 hover:text-accent-gold hover:text-heading rounded">Weddings & reception</a>
+        </li>
+        <li>
+           <a href="#" class="inline-flex items-center w-full p-2 hover:text-accent-gold hover:text-heading rounded">Social Events</a>
+        </li>
+        <li>
+           <a href="#" class="inline-flex items-center w-full p-2 hover:text-accent-gold hover:text-heading rounded">Private Events</a>
+        </li>
+        <li>
+           <a href="#" class="inline-flex items-center w-full p-2 hover:text-accent-gold hover:text-heading rounded">Destination Weddings</a>
+        </li>
+        <li>
+           <a href="#" class="inline-flex items-center w-full p-2 hover:text-accent-gold hover:text-heading rounded">Corporate Events</a>
+        </li>
+        <li>
+          <a href="#" class="inline-flex items-center w-full p-2 hover:text-accent-gold hover:text-heading rounded">Cultural Events</a>
+        </li>
+        <li>
+          <a href="#" class="inline-flex items-center w-full p-2 hover:text-accent-gold hover:text-heading rounded">Entertainment Events</a>
+        </li>
+        <li>
+          <a href="#" class="inline-flex items-center w-full p-2 hover:text-accent-gold hover:text-heading rounded">Social & Community evnts</a>
+        </li>
+       </ul>
+      </div>
+          <a href="login.html" class="nav-link">Login</a>
+          <a href="register.html" class="nav-link ">Register</a>
+          <a href="booking.html" class="nav-link">Booking</a>
+          <a href="contact.html" class="nav-link ">Contact</a>
+        </div>
+
+        <div class="flex items-center gap-4">
+          <button id="theme-toggle" class="theme-toggle relative" aria-label="Toggle dark mode">
+            <svg class="icon-sun w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+            <svg class="icon-moon w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+          </button>
+          <a href="booking.html" class="hidden sm:inline-flex btn-primary text-sm py-2 px-5 gap-26 ">Book Now</a>
+          <button id="hamburger" class="hamburger md:hidden" aria-label="Open menu" aria-expanded="false">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav> 
+
+   <!-- Mobile Menu -->
+  <div id="mobile-menu" class="mobile-menu" role="dialog" aria-label="Mobile navigation">
+    <a href="index.html" class="nav-link">Home</a>
+    <a href="login.html" class="nav-link">Login</a>
+    <a href="register.html" class="nav-link">Register</a>
+    <a href="booking.html" class="nav-link">Booking</a>
+    <a href="contact.html" class="nav-link">Contact</a>
+    <a href="booking.html" class="btn-primary mt-4">Book Now</a>
+  </div>
+
+  <section class="hero-section" aria-label="Hero">
+      <div class="hero-bg img-fluid" style="background-image: url('./wedding.jpg');" role="img" aria-label="Elegant event venue with ambient lighting"></div>
+      <div class="hero-overlay"></div>
+
+      <!-- golden shade on the banner image  -->
+      <!-- <div class="floating-element w-64 h-64 top-20 right-10"></div>
+      <div class="floating-element w-48 h-48 bottom-32 left-10"></div>
+      <div class="floating-element w-32 h-32 top-1/2 left-1/3"></div> -->
+
+      <div class="hero-content max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full pt-24">
+        <div class="max-w-3xl">
+          <span class="hero-label section-label">Premium Event Management</span>
+          <h1 class="hero-title font-display text-5xl sm:text-6xl lg:text-7xl font-bold leading-tight mb-6">
+            Crafting <span class="text-gradient">Extraordinary</span> Moments
+          </h1>
+          <p class="hero-subtitle text-xl sm:text-2xl text-secondary mb-4" style="color: var(--text-secondary);">
+            Where Vision Meets Perfection
+          </p>
+          <p class="hero-description text-lg mb-8 max-w-xl leading-relaxed" style="color: var(--text-secondary);">
+            From intimate gatherings to grand celebrations, Asquare Events transforms your dreams into breathtaking realities with meticulous planning and flawless execution.
+          </p>
+          <div class="hero-buttons flex flex-wrap gap-4">
+            <a href="booking.html" class="btn-primary">Book Now</a>
+            <a href="#services" class="btn-outline">Explore Services</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="scroll-indicator" aria-hidden="true">
+        <div class="mouse"><div class="wheel"></div></div>
+        <span>Scroll</span>
+      </div>
+    </section>
+
+    <!--  ABOUT  -->
+    <section id="about" class="about-section section-padding justify-between flex" aria-labelledby="about-heading">
+      <div class=" px-4 sm:px-6 lg:px-8">
+        <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          <div class="about-image relative">
+            <figure class="relative  transition-all duration-300 cursor-pointer filter grayscale hover:grayscale-0">
+            <img src="./kadhakali.jpg" alt="Professional event planners coordinating a luxury wedding setup" class="rounded-2xl shadow-2xl w-full h-[400px] lg:h-[500px] object-cover" loading="lazy">
+            <div class="absolute -bottom-6 -right-6 glass-card rounded-xl p-6 hidden sm:block">
+              <p class="font-display text-3xl font-bold text-gradient">12+</p>
+              <p class="text-sm" style="color: var(--text-secondary);">Years of Excellence</p>
+            </div>
+            </figure>
+          </div>
+          <div class="about-content ">
+            <span class="section-label gsap-reveal">Main Goals</span>
+            <h2 id="about-heading" class="section-title gsap-reveal">Elevating Every Celebration Since 2012</h2>
+            <p class="section-subtitle mb-8 gsap-reveal" style="color: #d4af37;">
+              Asquare Events is a premier event management company dedicated to creating unforgettable experiences. Our team of seasoned professionals brings creativity, precision, and passion to every project.
+            </p>
+              <div class="gsap-reveal rounded-xl p-5 mb-6">
+                <h3 class="font-display text-lg font-semibold mb-2 flex  gap-2">
+                  <span style="color: var(--accent-gold);">◆</span> Our Mission
+                </h3>
+                <p style="color: var(--text-secondary);" class="text-sm leading-relaxed">To deliver exceptional event experiences that exceed expectations, creating lasting memories through innovative design and flawless execution.</p>
+              </div>
+              <div class="gsap-reveal rounded-xl p-5 mb-6 ">
+                <h3 class="font-display text-lg font-semibold mb-2 flex items-center gap-2">
+                  <span style="color: var(--accent-gold);">◆</span> Client-Focused & Relationship-Driven
+                </h3>
+                <p style="color: var(--text-secondary);" class="text-sm leading-relaxed">We believe in making every interaction seamless—both for our clients and our internal team. This dropdown menu is designed to streamline your experience, whether you're a planner managing multiple weddings and corporate galas, or a client checking in on your event's progress.</p>
+              </div>
+              <div class="gsap-reveal rounded-xl p-5 mb-6">
+                <h3 class="font-display text-lg font-semibold mb-2 flex items-center gap-2">
+                  <span style="color: var(--accent-gold);">◆</span>  Brand-Focused & Inspirational
+                </h3>
+                <p style="color: var(--text-secondary);" class="text-sm leading-relaxed">Every great event starts with seamless coordination, and this dropdown menu is the command center for making magic happen. Whether you're orchestrating a fairy-tale wedding, a high-profile corporate gala, or an intimate birthday celebration, our user-friendly menu puts everything you need right at your fingertips. Access your event dashboard to track every detail from conception to execution.</p>
+              </div>
+              <div class="gsap-reveal rounded-xl p-5 mb-6">
+                <h3 class="font-display text-lg font-semibold mb-2 flex items-center gap-2">
+                  <span style="color: var(--accent-gold);">◆</span>  Elegant & Experience-Focused
+                </h3>
+                <p style="color: var(--text-secondary);" class="text-sm leading-relaxed">To deliver exceptional event experiences that exceed expectations, creating lasting memories through innovative design and flawless execution.</p>
+              </div>
+              </div>
+            </div>
+          </div>
+      </div>
+    </section>
+
+
+     <!--  SERVICES -->
+    <section id="services" class="services-section section-padding" aria-labelledby="services-heading">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16 gsap-reveal1">
+          <span class="section-label">What We Offer</span>
+          <h2 id="services-heading" class="section-title">Our Premium Services</h2>
+          <p class="section-subtitle mx-auto">"From first birthdays to milestone parties, we handle the décor, entertainment, and catering so the day feels effortless."</p>
+        </div>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+           <a href=""><div class="service-card">
+            <div class="service-icon">🎂</div>
+            <h3 class="font-display text-xl font-semibold mb-3">Birthday Planning</h3>
+            <p class="text-sm leading-relaxed">From milestone celebrations to themed parties, we create magical birthday experiences with custom décor, entertainment, and catering.</p>
+          </div>
+            </a>
+
+          <a href=""><article class="service-card">
+            <div class="service-icon">💍</div>
+            <h3 class="font-display text-xl font-semibold mb-3">Wedding Management</h3>
+            <p class="text-sm leading-relaxed">Full-service wedding planning from engagement to reception — venue selection, vendor coordination, and day-of management.</p>
+          </article>
+          </a>
+          <a href=""><article class="service-card">
+            <div class="service-icon">📸</div>
+            <h3 class="font-display text-xl font-semibold mb-3">Photography</h3>
+            <p class="text-sm leading-relaxed">Professional photography and videography services capturing every precious moment with artistic flair and cinematic quality.</p>
+          </article>
+          </a>
+          <a href=""><article class="service-card">
+            <div class="service-icon">🏢</div>
+            <h3 class="font-display text-xl font-semibold mb-3">Corporate Events</h3>
+            <p class="text-sm leading-relaxed">Conferences, product launches, team building, and gala dinners executed with corporate precision and brand alignment.</p>
+          </article>
+          </a>
+          <a href=""><article class="service-card">
+            <div class="service-icon">🎓</div>
+            <h3 class="font-display text-xl font-semibold mb-3">Workshop & Seminar</h3>
+            <p class="text-sm leading-relaxed">Educational events and professional workshops with seamless logistics, AV setup, registration management, and catering.</p>
+          </article>
+          </a>
+          <a href=""><article class="service-card">
+            <div class="service-icon">✨</div>
+            <h3 class="font-display text-xl font-semibold mb-3">Custom Events</h3>
+            <p class="text-sm leading-relaxed">Have a unique vision? Our creative team specializes in bespoke events — anniversaries, fundraisers, fashion shows, and more.</p>
+          </article>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <script>
+  AOS.init();
+</script>
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@4.0.1/dist/flowbite.min.js"></script>
+</body>
+</html>
