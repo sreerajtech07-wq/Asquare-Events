@@ -435,21 +435,27 @@ select{
     gap:20px;
 }
 
-.btn-outline{
-    display:inline-flex;
-    align-items:center;
-    justify-content:center;
-    padding:14px 32px;
-    border:2px solid #fff;
-    color:#fff;
-    border-radius:50px;
-    text-decoration:none;
-    transition:.35s;
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.875rem 2rem;
+  background: transparent;
+  color: var(--text-primary);
+  font-weight: 600;
+  font-size: 0.9375rem;
+  border-radius: 9999px;
+  border: 2px solid var(--glass-border);
+  cursor: pointer;
+  transition: all 0.3s var(--transition-smooth);
+  text-decoration: none;
 }
 
-.btn-outline:hover{
-    background:#fff;
-    color:#000;
+.btn-outline:hover {
+  border-color: var(--accent-gold);
+  background: rgba(212, 175, 55, 0.08);
+  transform: translateY(-2px);
 }
 
 /* Gradient Text */
