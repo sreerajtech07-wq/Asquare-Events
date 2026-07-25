@@ -1222,4 +1222,407 @@ select{
 }
 
 
+/* PRICING SECTION */
+.pricing-section {
+    padding: 80px 0 0 120px;
+    background: var(--bg-primary);
+}
 
+.pricing-section .text-center {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.pricing-section .section-label {
+    display: inline-block;
+    color: var(--primary);
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+    /* background: rgba(212, 175, 55, 0.08); */
+    padding: 6px 18px;
+    border-radius: 50px;
+    /* border: 1px solid rgba(212, 175, 55, 0.15); */
+}
+
+.pricing-section .section-title {
+    font-size: 52px;
+    color: #fff;
+    margin-bottom: 20px;
+    font-family: 'Cinzel', serif;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.pricing-section .section-subtitle {
+    max-width: 700px;
+    margin: auto;
+    color: #bdbdbd;
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+.pricing-section .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    align-items: center;
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+/* ============================================
+   PRICING CARDS
+   ============================================ */
+.pricing-card {
+    background: rgba(20, 20, 20, 0.8);
+    border: 1px solid rgba(212, 175, 55, 0.15);
+    border-radius: 20px;
+    padding: 36px 28px;
+    text-align: center;
+    transition: all 0.35s ease;
+    position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.pricing-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+    border-color: var(--primary);
+}
+
+/* Featured Card */
+.pricing-card.featured {
+    border-color: var(--primary);
+    background: linear-gradient(180deg, rgba(20, 20, 20, 0.8) 0%, rgba(212, 175, 55, 0.05) 100%);
+    box-shadow: 0 0 40px rgba(212, 175, 55, 0.15);
+    transform: scale(1.05);
+    padding-top: 48px;
+}
+
+.pricing-card.featured:hover {
+    transform: scale(1.05) translateY(-8px);
+}
+
+.pricing-badge {
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(135deg, #B8860B, #D4AF37, #F5D061);
+    color: #0A0A0A;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 4px 20px;
+    border-radius: 50px;
+}
+
+/* Card Content */
+.pricing-card h3 {
+    font-family: 'Cinzel', serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #fff;
+}
+
+.pricing-card .font-display {
+    font-family: 'Cinzel', serif;
+}
+
+.pricing-card .text-sm {
+    font-size: 0.875rem;
+    margin-bottom: 16px;
+}
+
+.pricing-price {
+    font-family: 'Cinzel', serif;
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 24px;
+}
+
+/* Features List */
+.pricing-features {
+    list-style: none;
+    text-align: left;
+    padding: 0;
+    margin-bottom: 32px;
+    flex-grow: 1;
+}
+
+.pricing-features li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 0;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.pricing-features li:last-child {
+    border-bottom: none;
+}
+
+.pricing-features li svg {
+    color: var(--primary);
+    flex-shrink: 0;
+    min-width: 16px;
+}
+
+/* Buttons */
+.pricing-card .btn-outline {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 14px 32px;
+    border: 2px solid var(--primary);
+    color: #fff;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.35s ease;
+    background: transparent;
+}
+
+.pricing-card .btn-outline:hover {
+    background: var(--primary);
+    color: #000;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(212, 175, 55, 0.3);
+}
+
+.pricing-card .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 14px 32px;
+    background: var(--primary);
+    color: #000;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.35s ease;
+    border: none;
+}
+
+.pricing-card .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(212, 175, 55, 0.35);
+}
+
+.pricing-card .w-full {
+    width: 100%;
+}
+
+.pricing-card .text-center {
+    text-align: center;
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+@media (max-width: 1024px) {
+    .pricing-section .grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+        max-width: 768px;
+    }
+
+    .pricing-card.featured {
+        transform: scale(1);
+        grid-column: span 2;
+    }
+
+    .pricing-card.featured:hover {
+        transform: scale(1) translateY(-8px);
+    }
+}
+
+@media (max-width: 768px) {
+    .pricing-section {
+        padding: 60px 20px;
+    }
+
+    .pricing-section .grid {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+        gap: 24px;
+    }
+
+    .pricing-section .section-title {
+        font-size: 34px;
+    }
+
+    .pricing-section .section-subtitle {
+        font-size: 16px;
+    }
+
+    .pricing-card.featured {
+        grid-column: span 1;
+        transform: scale(1);
+        padding-top: 48px;
+    }
+
+    .pricing-card.featured:hover {
+        transform: scale(1) translateY(-8px);
+    }
+
+    .pricing-price {
+        font-size: 2.2rem;
+    }
+
+    .pricing-card {
+        padding: 28px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .pricing-section .section-title {
+        font-size: 28px;
+    }
+
+    .pricing-price {
+        font-size: 2rem;
+    }
+
+    .pricing-card h3 {
+        font-size: 1.25rem;
+    }
+
+    .pricing-card .btn-outline,
+    .pricing-card .btn-primary {
+        padding: 12px 24px;
+        font-size: 0.875rem;
+    }
+
+    .pricing-features li {
+        font-size: 0.8rem;
+        padding: 8px 0;
+    }
+
+    .pricing-badge {
+        font-size: 0.6rem;
+        padding: 3px 16px;
+    }
+}
+
+
+
+/* ============================================
+   COUNTERS SECTION
+   ============================================ */
+.counter-section {
+    background: var(--bg-secondary);
+    border-top: 1px solid var(--glass-border);
+    border-bottom: 1px solid var(--glass-border);
+    padding: 90px;
+    margin-top: 60px;
+}
+
+.counter-section .grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+}
+
+/* ============================================
+   COUNTER ITEMS
+   ============================================ */
+.counter-item {
+    text-align: center;
+    padding: 24px 16px;
+    transition: all 0.35s ease;
+    border-radius: 12px;
+}
+
+
+.counter-number {
+    font-family: 'Cinzel', serif;
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--primary);
+    line-height: 1;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.counter-item .text-sm {
+    font-size: 0.875rem;
+    font-weight: 500;
+    margin-top: 8px;
+    color: var(--text-secondary);
+}
+
+/* Counter Suffix */
+.counter-suffix {
+    font-family: 'Cinzel', serif;
+    font-size: 2rem;
+    color: var(--primary);
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+@media (max-width: 1024px) {
+    .counter-section .grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .counter-number {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .counter-section {
+        padding: 60px 20px;
+    }
+
+    .counter-section .grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+    }
+
+    .counter-number {
+        font-size: 2rem;
+    }
+
+    .counter-item {
+        padding: 16px 12px;
+    }
+
+    .counter-item .text-sm {
+        font-size: 0.75rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .counter-section .grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+    }
+
+    .counter-number {
+        font-size: 1.75rem;
+    }
+
+    .counter-item {
+        padding: 12px 8px;
+    }
+
+    .counter-item .text-sm {
+        font-size: 0.7rem;
+    }
+}

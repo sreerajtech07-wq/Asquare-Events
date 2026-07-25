@@ -17,6 +17,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montenegrin+Gothic+One&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&family=Raleway:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
     <!-- css link  -->
     <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
     <!-- animation  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <!-- aos  -->
@@ -261,7 +262,7 @@
                     </div>
                 </div>
                 <div class="gallery-item tall" data-category="birthday">
-                    <img src="./images/birthday.jpg" alt="Luxury birthday party decoration" loading="lazy">
+                    <img src="https://i.pinimg.com/vwebp/1200x/7d/d1/16/7dd116df8919af3ab389eb552345fc19.webp" alt="Luxury birthday party decoration" loading="lazy">
                     <div class="gallery-overlay">
                         <span class="gallery-category">Birthday</span>
                         <h3 class="font-display text-lg font-semibold">Golden Celebration</h3>
@@ -269,7 +270,7 @@
                     </div>
                 </div>
                 <div class="gallery-item" data-category="photography">
-                    <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=600&q=80" alt="Event photography in action" loading="lazy">
+                    <img src="https://i.pinimg.com/736x/6d/93/32/6d9332810c8fda1687a715046be474c3.jpg" alt="Event photography in action" loading="lazy">
                     <div class="gallery-overlay">
                         <span class="gallery-category">Photography</span>
                         <h3 class="font-display text-lg font-semibold">Live Capture</h3>
@@ -388,6 +389,88 @@
                 </article>
             </div>
         </div>
+    </section>
+
+    <!--  PRICING  -->
+    <section id="pricing" class="pricing-section section-padding" aria-labelledby="pricing-heading">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16 gsap-reveal">
+          <span class="section-label">Investment</span>
+          <h2 id="pricing-heading" class="section-title">Pricing Packages</h2>
+          <p class="section-subtitle mx-auto">Transparent pricing with no hidden fees. Choose the package that fits your vision.</p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8 items-center max-w-5xl mx-auto">
+          <!-- Silver -->
+          <div class="pricing-card">
+            <h3 class="font-display text-xl font-semibold mb-2">Silver</h3>
+            <p class="text-sm mb-4" style="color: var(--text-secondary);">Perfect for intimate gatherings</p>
+            <p class="pricing-price mb-6">₹20,999</p>
+            <ul class="pricing-features mb-8">
+              <li><svg width="16" height="16" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg> Up to 290 guests</li>
+              <li><svg width="16" height="16" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg> Basic décor & styling</li>
+              <li><svg width="16" height="16" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg> Event coordinator</li>
+              <li><svg width="16" height="16" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg> 4-hour event coverage</li>
+            </ul>
+            <a href="booking.html" class="btn-outline w-full text-center">Get Started</a>
+          </div>
+
+          <!-- Gold (Featured) -->
+          <div class="pricing-card featured">
+            <span class="pricing-badge">Most Popular</span>
+            <h3 class="font-display text-xl font-semibold mb-2 mt-2">Gold</h3>
+            <p class="text-sm mb-4" style="color: var(--text-secondary);">Our most popular choice</p>
+            <p class="pricing-price mb-6">₹44,999</p>
+            <ul class="pricing-features mb-8">
+              <li><svg width="16" height="16" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg> Up to 450 guests</li>
+              <li><svg width="16" height="16" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg> Premium décor & florals</li>
+              <li><svg width="16" height="16" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg> Dedicated event manager</li>
+              <li><svg width="16" height="16" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg> Photography package</li>
+              <li><svg width="16" height="16" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg> Full-day coverage</li>
+            </ul>
+            <a href="booking.html" class="btn-primary w-full text-center">Book Gold</a>
+          </div>
+
+          <!-- Platinum -->
+          <div class="pricing-card">
+            <h3 class="font-display text-xl font-semibold mb-2">Platinum</h3>
+            <p class="text-sm mb-4" style="color: var(--text-secondary);">The ultimate luxury experience</p>
+            <p class="pricing-price mb-6">₹79,999</p>
+            <ul class="pricing-features mb-8">
+              <li><svg width="16" height="16" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg> Unlimited guests</li>
+              <li><svg width="16" height="16" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg> Bespoke design & styling</li>
+              <li><svg width="16" height="16" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg> Full planning team</li>
+              <li><svg width="16" height="16" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg> Photo + video + drone</li>
+              <li><svg width="16" height="16" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg> Multi-day coverage</li>
+            </ul>
+            <a href="booking.html" class="btn-outline w-full text-center">Go Platinum</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--  COUNTERS  -->
+    <section class="counter-section section-padding" aria-label="Company statistics">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
+          <div class="counter-item">
+            <p class="counter-number" data-counter="2500" data-suffix="+">0</p>
+            <p class="text-sm font-medium mt-2" style="color: var(--text-secondary);">Projects Completed</p>
+          </div>
+          <div class="counter-item">
+            <p class="counter-number" data-counter="1800" data-suffix="+">0</p>
+            <p class="text-sm font-medium mt-2" style="color: var(--text-secondary);">Happy Clients</p>
+          </div>
+          <div class="counter-item">
+            <p class="counter-number" data-counter="12" data-suffix="+">0</p>
+            <p class="text-sm font-medium mt-2" style="color: var(--text-secondary);">Years Experience</p>
+          </div>
+          <div class="counter-item">
+            <p class="counter-number" data-counter="45" data-suffix="">0</p>
+            <p class="text-sm font-medium mt-2" style="color: var(--text-secondary);">Awards Won</p>
+          </div>
+        </div>
+      </div>
     </section>
 
     <script>
