@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap');
 
 :root{
     --bg-primary:#0A0A0A;
@@ -80,8 +80,6 @@ select{
 /* Logo */
 
 .text-gradient{
-    background: linear-gradient(90deg,#FFD700,#FFA500);
-    -webkit-background-clip:text;
     -webkit-text-fill-color:transparent;
     font-weight:700;
 }
@@ -401,8 +399,6 @@ select{
 .hero-label{
     display:inline-block;
     padding:8px 18px;
-    /* background:rgba(212,175,55,.15); */
-    /* border:1px solid rgba(212,175,55,.4); */
     border-radius:30px;
     color:#FFD700;
     font-size:14px;
@@ -654,21 +650,6 @@ select{
     margin-top: 10px;
 }
 
-.section-label{
-    display:inline-block;
-    color:#d4af37;
-    font-size:14px;
-    letter-spacing:1px;
-    margin-bottom:18px;
-}
-
-.section-title{
-    font-size:46px;
-    line-height:1.2;
-    margin-bottom:20px;
-    font-weight:700;
-}
-
 .section-subtitle{
     max-width:700px;
     margin:auto;
@@ -862,8 +843,6 @@ select{
     text-decoration:none;
 }
 
-
-
 /* Cards */
 
 .service-card{
@@ -884,7 +863,6 @@ select{
     left:0;
     width:100%;
     height:4px;
-    background:#d4af37;
     transform:scaleX(0);
     transform-origin:left;
     transition:.4s;
@@ -917,7 +895,6 @@ select{
 }
 
 .service-card:hover .service-icon{
-    background:#d4af37;
     color:#111;
     transform:rotate(10deg) scale(1.08);
 }
@@ -942,6 +919,9 @@ select{
 /*=====================================
           GALLERY SECTION
 =====================================*/
+#gallery{
+    font-family: "Nunito", sans-serif;
+}
 
 .gallery-section{
     padding:100px 8%;
@@ -964,16 +944,16 @@ select{
     margin-bottom:50px;
 }
 
-.filter-tab{
-    padding:12px 28px;
-    border:1px solid rgba(255,255,255,.08);
-    border-radius:50px;
-    background:var(--bg-secondary);
-    color:var(--text-secondary);
-    cursor:pointer;
-    transition:.35s ease;
-    font-size:15px;
-    font-weight:500;
+.filter-tab {
+    padding: 0.5rem 1.25rem;
+    border-radius: 9999px;
+    border: 1px solid var(--glass-border);
+    background: transparent;
+    color: var(--text-secondary);
+    font-size: 0.875rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s;
 }
 
 .filter-tab:hover,
@@ -1046,13 +1026,9 @@ select{
     display:inline-block;
     width:fit-content;
     padding:6px 14px;
-    /* border-radius:30px; */
-    /* background:rgba(212,175,55,.18); */
     color:var(--primary);
     font-size:13px;
-    /* margin-bottom:12px; */
     font-weight:600;
-    /* border:1px solid rgba(212,175,55,.25); */
 }
 
 /* Title */
@@ -1218,3 +1194,28 @@ select{
     }
 
 }
+
+
+/* events  */
+
+.event-card {
+  border-radius: 1.25rem;
+  overflow: hidden;
+  background: var(--bg-card);
+  border: 1px solid var(--glass-border);
+  transition: transform 0.4s, box-shadow 0.4s;
+}
+
+.event-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-glow);
+}
+
+.event-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+
+
