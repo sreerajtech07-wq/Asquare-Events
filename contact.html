@@ -1,0 +1,961 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Page</title>
+    <!-- Tailwind -->
+        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+        <!-- Flowbite  -->
+         <link href="https://cdn.jsdelivr.net/npm/flowbite@4.0.1/dist/flowbite.min.css" rel="stylesheet" />
+
+
+         <!-- Google Fonts  -->
+          <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Anton&family=Cinzel:wght@400..900&family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Geist+Pixel&family=Kameron:wght@400..700&family=Lora:ital,wght@0,400..700;1,400..700&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Michroma&family=Montenegrin+Gothic+One&family=Playwrite+NZ:wght@100..400&family=Roboto:ital,wght@0,100..900;1,100..900&family=Yanone+Kaffeesatz:wght@200..700&family=Zilla+Slab:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
+<!-- bootstrap  -->
+ <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+
+<style>
+   .heading{
+    font-family: 'Cinzel', serif;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+    body{
+    background-color: #0A0A0A;
+    color: #FAFAF9;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.theme-toggle{
+    width:45px;
+    height:45px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    position:relative;
+    border:none;
+    border-radius:50%;
+    cursor:pointer;
+    background:rgba(255,255,255,0.05);
+    border:1px solid rgba(212,175,55,.2);
+    backdrop-filter:blur(10px);
+    -webkit-backdrop-filter:blur(10px);
+    color:#FAFAF9;
+    transition:all .35s ease;
+    overflow:hidden;
+}
+
+.theme-toggle:hover{
+    background:linear-gradient(135deg,#B8860B,#D4AF37,#F5D061);
+    color:#000;
+    transform:translateY(-2px);
+    box-shadow:0 10px 25px rgba(212,175,55,.35);
+}
+
+.theme-toggle:active{
+    transform:scale(.95);
+}
+
+.theme-toggle svg{
+    width:20px;
+    height:20px;
+    position:absolute;
+    stroke:currentColor;
+    fill:none;
+    stroke-width:2;
+    transition:all .35s ease;
+}
+
+/* Light Mode */
+.icon-sun{
+    opacity:1;
+    transform:rotate(0deg) scale(1);
+}
+
+.icon-moon{
+    opacity:0;
+    transform:rotate(90deg) scale(.5);
+}
+
+/* Dark Mode */
+body.dark .icon-sun{
+    opacity:0;
+    transform:rotate(-90deg) scale(.5);
+}
+
+body.dark .icon-moon{
+    opacity:1;
+    transform:rotate(0deg) scale(1);
+}
+
+body.dark .theme-toggle{
+    background:rgba(255,255,255,.08);
+    color:#F5D061;
+}
+
+body.dark .theme-toggle:hover{
+    background:linear-gradient(135deg,#B8860B,#D4AF37,#F5D061);
+    color:#000;
+}
+
+.nav-link{
+    position: relative;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #FAFAF9;
+    padding: 0 20px;
+    transition: all .35s ease;
+}
+
+.nav-link:hover{
+    color: #D4AF37;
+}
+
+.nav-link::after{
+    content: "";
+    position: absolute;
+    left: 20px;
+    bottom: -8px;
+    width: 0;
+    height: 2px;
+    background: #D4AF37;
+    transition: .35s ease;
+}
+
+.nav-link:hover::after{
+    width: calc(100% - 40px);
+}
+
+.nav-link.active{
+    color: #D4AF37;
+}
+
+.nav-link.active::after{
+    width: calc(100% - 40px);
+}
+nav{
+    border: none !important;
+    border-bottom: none !important;
+    box-shadow: none !important;
+}
+
+nav::after{
+    display: none !important;
+}
+
+
+.contact-hero{
+    background:#17130a;
+    text-align:center;
+    padding:90px 20px 80px;
+    margin-top: -20px;
+}
+
+.hero-subtitle{
+    font-family:'Montserrat',sans-serif;
+    font-size:16px;
+    font-weight:700;
+    color:#D4AF37;
+    letter-spacing:4px;
+    text-transform:uppercase;
+    margin-bottom:25px;
+}
+
+.hero-title{
+    font-family:'Cinzel',serif;
+    font-size:54px;
+    font-weight:700;
+    color:#F8F8F8;
+    line-height:1;
+    margin-bottom:30px;
+}
+
+.hero-description{
+    max-width:850px;
+    margin:auto;
+    font-family:'Montserrat',sans-serif;
+    font-size:20px;
+    line-height:1.8;
+    color:#C2B9A6;
+}
+
+
+
+#contact-info{
+    width:100%;
+    background:#0A0A0A;
+    padding:90px 8%;
+}
+
+.contact-container{
+    max-width:1200px;
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+    gap:40px;
+}
+
+.map-area{
+    width:50%;
+}
+
+.map-area iframe{
+    width:100%;
+    height:360px;
+    border:none;
+    border-radius:22px;
+}
+
+.details-area{
+    width:50%;
+}
+
+.details-area h2{
+    font-family:'Cinzel',serif;
+    font-size:36px;
+    color:#fff;
+    margin-bottom:35px;
+}
+
+.info-box{
+    width:100%;
+    min-height:60px;
+    display:flex;
+    align-items:center;
+    gap:25px;
+    padding:30px;
+    margin-bottom:25px;
+    background:#151515;
+    border:1px solid rgba(212,175,55,.18);
+    border-radius:20px;
+    transition:.35s;
+}
+
+.info-box:hover{
+    transform:translateY(-5px);
+    border-color:#D4AF37;
+    box-shadow:0 20px 40px rgba(0,0,0,.35);
+}
+
+.icon{
+    width:60px;
+    height:60px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-shrink:0;
+    background:rgba(212,175,55,.08);
+    border-radius:50%;
+}
+
+.icon i{
+    color:#D4AF37;
+    font-size:28px;
+}
+
+.content{
+    flex:1;
+}
+
+.content h3{
+    font-family:'Cinzel',serif;
+    color:#fff;
+    font-size:26px;
+    margin-bottom:10px;
+}
+
+.content h4{
+    color:#d8d8d8;
+    font-size:18px;
+    line-height:30px;
+    font-weight:400;
+}
+
+.content p{
+    color:#808080;
+    font-size:16px;
+    line-height:28px;
+    margin-top:10px;
+}
+
+.content a{
+    color:#D4AF37;
+    text-decoration:none;
+    font-size:18px;
+}
+
+.social-title{
+    margin-top:45px;
+    margin-bottom:25px;
+    color:#fff;
+    font-family:'Cinzel',serif;
+    font-size:28px;
+}
+
+.social-icons{
+    display:flex;
+    gap:20px;
+}
+
+.social-icons a{
+    width:58px;
+    height:58px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    border-radius:50%;
+    border:1px solid rgba(212,175,55,.2);
+    color:#fff;
+    text-decoration:none;
+    font-size:22px;
+    transition:.3s;
+}
+
+.social-icons a:hover{
+    background:#D4AF37;
+    color:#000;
+}
+
+@media(max-width:992px){
+
+.contact-container{
+    flex-direction:column;
+}
+
+.map-area,
+.details-area{
+    width:100%;
+}
+
+.map-area iframe{
+    height:450px;
+}
+
+.details-area h2{
+    text-align:center;
+}
+
+.social-title{
+    text-align:center;
+}
+
+.social-icons{
+    justify-content:center;
+}
+
+}
+
+@media(max-width:768px){
+
+#contact-info{
+    padding:70px 20px;
+}
+
+.info-box{
+    min-height:auto;
+    padding:25px;
+    align-items:flex-start;
+}
+
+.icon{
+    width:50px;
+    height:50px;
+}
+
+.icon i{
+    font-size:22px;
+}
+
+.content h3{
+    font-size:20px;
+}
+
+.content h4{
+    font-size:16px;
+}
+
+.content p{
+    font-size:14px;
+}
+
+}
+
+
+
+
+#contact-form{
+    background:#0A0A0A;
+    padding:100px 8%;
+}
+
+.form-container{
+    max-width:900px;
+    margin:auto;
+    background:#141414;
+    border:1px solid rgba(212,175,55,.18);
+    border-radius:22px;
+    padding:60px;
+}
+
+.form-heading{
+    text-align:center;
+    margin-bottom:45px;
+}
+
+.form-heading p{
+    color:#D4AF37;
+    letter-spacing:3px;
+    font-size:15px;
+    font-weight:600;
+    margin-bottom:10px;
+}
+
+.form-heading h2{
+    font-family:'Cinzel',serif;
+    font-size:42px;
+    color:#fff;
+}
+
+.form-heading span{
+    display:block;
+    width:80px;
+    height:2px;
+    background:#D4AF37;
+    margin:18px auto;
+}
+
+.form-heading h4{
+    color:#9d9d9d;
+    font-size:17px;
+    font-weight:400;
+    line-height:30px;
+}
+
+.input-group{
+    margin-bottom:25px;
+}
+
+.input-group label{
+    display:block;
+    color:#fff;
+    margin-bottom:10px;
+    font-weight:600;
+}
+
+.input-group input,
+.input-group textarea{
+    width:100%;
+    padding:18px;
+    background:#1c1c1c;
+    border:1px solid rgba(255,255,255,.08);
+    border-radius:12px;
+    color:#fff;
+    font-size:16px;
+    outline:none;
+    box-sizing:border-box;
+    transition:.3s;
+}
+
+.input-group textarea{
+    resize:none;
+}
+
+.input-group input::placeholder,
+.input-group textarea::placeholder{
+    color:#7b7b7b;
+}
+
+.input-group input:focus,
+.input-group textarea:focus{
+    border-color:#D4AF37;
+    box-shadow:0 0 12px rgba(212,175,55,.25);
+}
+
+form button{
+    width:100%;
+    padding:18px;
+    border:none;
+    border-radius:12px;
+    background:#D4AF37;
+    color:#111;
+    font-size:18px;
+    font-weight:700;
+    cursor:pointer;
+    transition:.3s;
+}
+
+form button:hover{
+    background:#F5D061;
+    transform:translateY(-3px);
+}
+
+@media(max-width:768px){
+
+#contact-form{
+    padding:70px 20px;
+}
+
+.form-container{
+    padding:35px 25px;
+}
+
+.form-heading h2{
+    font-size:32px;
+}
+
+}
+
+.heading{
+    font-family:'Cinzel',serif;
+}
+
+.nav-link{
+    color:#fff;
+    transition:.3s;
+}
+
+.nav-link:hover{
+    color:#D4AF37;
+}
+
+.theme-toggle{
+    width:42px;
+    height:42px;
+    border-radius:50%;
+    border:1px solid rgba(212,175,55,.3);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#222;
+    color:#fff;
+    cursor:pointer;
+}
+
+.theme-toggle svg{
+    width:18px;
+    height:18px;
+}
+
+.icon-moon{
+    display:none;
+}
+
+/* Contact Details Cards */
+
+.info-box{
+    width:100%;
+    min-height:55px;
+    display:flex;
+    align-items:center;
+    gap:16px;
+    padding:16px;
+    margin-bottom:15px;
+    background:#151515;
+    border:1px solid rgba(212,175,55,.18);
+    border-radius:14px;
+    transition:.35s;
+}
+
+.info-box:hover{
+    transform:translateY(-4px);
+    border-color:#D4AF37;
+    box-shadow:0 15px 30px rgba(0,0,0,.3);
+}
+
+.icon{
+    width:45px;
+    height:45px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-shrink:0;
+    background:rgba(212,175,55,.08);
+    border-radius:50%;
+}
+
+.icon i{
+    color:#D4AF37;
+    font-size:20px;
+}
+
+.content{
+    flex:1;
+}
+
+.content h3{
+    font-family:'Cinzel',serif;
+    color:#fff;
+    font-size:20px;
+    margin-bottom:5px;
+}
+
+.content h4{
+    color:#d8d8d8;
+    font-size:15px;
+    line-height:22px;
+    font-weight:400;
+}
+
+.content p{
+    color:#808080;
+    font-size:14px;
+    line-height:22px;
+    margin-top:5px;
+}
+
+
+/* Contact Form */
+
+.form-container{
+    max-width:620px;
+    margin:auto;
+    background:#141414;
+    border:1px solid rgba(212,175,55,.18);
+    border-radius:18px;
+    padding:30px;
+}
+
+.form-heading{
+    text-align:center;
+    margin-bottom:28px;
+}
+
+.form-heading h2{
+    font-family:'Cinzel',serif;
+    font-size:30px;
+    color:#fff;
+}
+
+.form-heading h4{
+    font-size:15px;
+    line-height:26px;
+}
+
+.input-group{
+    margin-bottom:16px;
+}
+
+.input-group label{
+    display:block;
+    color:#fff;
+    margin-bottom:6px;
+    font-weight:600;
+    font-size:15px;
+}
+
+.input-group input,
+.input-group textarea{
+    width:100%;
+    padding:12px 14px;
+    background:#1c1c1c;
+    border:1px solid rgba(255,255,255,.08);
+    border-radius:10px;
+    color:#fff;
+    font-size:15px;
+    outline:none;
+    box-sizing:border-box;
+    transition:.3s;
+}
+
+.input-group textarea{
+    resize:none;
+}
+
+.input-group input::placeholder,
+.input-group textarea::placeholder{
+    color:#7b7b7b;
+}
+
+.input-group input:focus,
+.input-group textarea:focus{
+    border-color:#D4AF37;
+    box-shadow:0 0 10px rgba(212,175,55,.2);
+}
+
+form button{
+    width:100%;
+    padding:12px;
+    border:none;
+    border-radius:10px;
+    background:#D4AF37;
+    color:#111;
+    font-size:15px;
+    font-weight:700;
+    cursor:pointer;
+    transition:.3s;
+}
+
+form button:hover{
+    background:#F5D061;
+    transform:translateY(-2px);
+}
+
+</style>
+
+</head>
+<body>
+<nav class="bg-[#17130a]">
+<div class="max-w-7xl mx-auto px-5">
+
+<div class="flex items-center justify-between h-16">
+
+<!-- Logo -->
+<h1
+class="text-xl md:text-2xl font-bold"
+style="font-family:'Cinzel',serif;
+background:linear-gradient(135deg,#B8860B,#D4AF37,#F5D061);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;">
+Luxe Events
+</h1>
+
+<!-- Desktop Menu -->
+<div class="hidden md:flex flex-1 justify-center gap-8 lg:gap-10">
+
+<a href="index.html" class="nav-link">Home</a>
+
+<a href="login.html" class="nav-link">Login</a>
+
+<a href="register.html" class="nav-link">Register</a>
+
+<a href="booking.html" class="nav-link">Booking</a>
+
+<a href="contact.html" class="nav-link">Contact</a>
+
+</div>
+
+<!-- Right Side -->
+<div class="flex items-center gap-3">
+
+<button id="theme-toggle" class="theme-toggle">
+
+<svg class="icon-sun" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+<circle cx="12" cy="12" r="5"/>
+<path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
+</svg>
+
+<svg class="icon-moon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+<path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/>
+</svg>
+
+</button>
+
+<details class="relative md:hidden">
+
+<summary class="list-none cursor-pointer p-2 text-white">
+
+<svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+<path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+stroke-linecap="round"
+stroke-linejoin="round"/>
+</svg>
+
+</summary>
+
+<div class="absolute right-0 top-12 w-48 bg-white rounded-lg shadow-lg overflow-hidden z-50">
+
+<a href="index.html" class="block px-4 py-3 text-black hover:bg-gray-100">Home</a>
+
+<a href="login.html" class="block px-4 py-3 text-black hover:bg-gray-100">Login</a>
+
+<a href="register.html" class="block px-4 py-3 text-black hover:bg-gray-100">Register</a>
+
+<a href="booking.html" class="block px-4 py-3 text-black hover:bg-gray-100">Booking</a>
+
+<a href="contact.html" class="block px-4 py-3 text-black hover:bg-gray-100">Contact</a>
+
+</div>
+
+</details>
+
+</div>
+
+</div>
+
+</div>
+
+</nav>
+
+<section class="bg-[#17130a] text-center px-5 py-16 md:py-24">
+
+<p class="text-[#D4AF37] text-sm md:text-base uppercase tracking-[4px] font-semibold">
+GET IN TOUCH
+</p>
+
+<h1
+class="mt-5 text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight"
+style="font-family:'Cinzel',serif;">
+
+WE'D LOVE TO HEAR FROM
+
+<br class="hidden md:block">
+
+YOU
+
+</h1>
+
+<p class="mt-6 max-w-3xl mx-auto text-gray-300 text-base md:text-lg leading-8">
+
+Got a question, a brilliant idea, or ready to start planning?
+We're here to chat about your event vision, provide quotes,
+or simply offer some friendly advice.
+Reach out anytime—we're all ears!
+
+</p>
+
+</section>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+<section id="contact-info">
+
+    <div class="contact-container">
+
+      
+ <div class="map-area">
+     <iframe
+    src="https://maps.google.com/maps?q=Los+Angeles+CA&t=&z=13&ie=UTF8&iwloc=&output=embed" loading="lazy">
+         </iframe>
+        </div>
+
+       
+ <div class="details-area">
+
+    <h2>Stop By and Say Hello!</h2>
+
+     <div class="info-box">
+    <div class="icon">
+         <i class="bi bi-geo-alt-fill"></i>
+         </div>
+
+         <div class="content">
+     <h3>Our Studio</h3>
+                    <h4>742 Evergreen Terrace, Suite 100</h4>
+                    <h4>Los Angeles, CA 90001, USA</h4>
+                    <p>We're right in the heart of LA—coffee's always on!</p>
+                </div>
+            </div>
+
+            <div class="info-box">
+                <div class="icon">
+                    <i class="bi bi-envelope-fill"></i>
+                </div>
+
+                <div class="content">
+                    <h3>Drop Us An Email</h3>
+                    <a href="#">hello@luxeevents.com</a>
+                    <p>We usually reply within a few hours during business days.</p>
+                </div>
+            </div>
+
+            <div class="info-box">
+                <div class="icon">
+                    <i class="bi bi-telephone-fill"></i>
+                </div>
+
+                <div class="content">
+                    <h3>Give Us A Call</h3>
+                    <a href="#">+1 (555) 123-4567</a>
+                    <p>We love hearing from you—don't be shy!</p>
+                </div>
+            </div>
+
+            <div class="info-box">
+                <div class="icon">
+                    <i class="bi bi-clock-fill"></i>
+                </div>
+
+                <div class="content">
+                    <h3>When To Find Us</h3>
+                    <h4>Monday – Friday: 9:00 AM – 6:00 PM</h4>
+                    <h4>Saturday: 10:00 AM – 4:00 PM</h4>
+                    <h4>Sunday: Closed</h4>
+                </div>
+            </div>
+
+            <h3 class="social-title">Connect With Us Online</h3>
+             <div class="social-icons">
+                <a href="#"><i class="bi bi-facebook"></i></a>
+                <a href="#"><i class="bi bi-instagram"></i></a>
+                <a href="#"><i class="bi bi-twitter-x"></i></a>
+                <a href="#"><i class="bi bi-linkedin"></i></a>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+    
+
+<section id="contact-form" style=" background:rgba(212,175,55,.08);">
+
+    <div class="form-container shadow-2xl">
+
+        <div class="form-heading">
+            <p>GET IN TOUCH</p>
+            <h2>Shoot Us a Message</h2>
+
+            <span></span>
+
+            <h4>
+                We're all about making connections. Fill out the form below
+                and we'll get back to you within 48 hours—usually much sooner!
+            </h4>
+        </div>
+
+        <form>
+
+            <div class="input-group">
+                <label>Your Name</label>
+                <input type="text" placeholder="Alex john">
+            </div>
+
+            <div class="input-group">
+                <label>Email Address</label>
+                <input type="email" placeholder="alexjohn@example.com">
+            </div>
+
+            <div class="input-group">
+                <label>What's This About?</label>
+                <input type="text" placeholder="Wedding, Birthday, Corporate Event...">
+            </div>
+
+            <div class="input-group">
+                <label>Tell Us Everything</label>
+
+                <textarea rows="7"
+                    placeholder="Share your ideas, questions, or anything else on your mind..."></textarea>
+            </div>
+             <button type="submit">
+                Send My Message
+            </button>
+        </form>
+    </div>
+</section>
+
+
+<footer class="bg-[#151515] border-t border-[#3d3215]">
+    <div class="h-25 flex justify-center items-center px-6">
+        <p class="text-[#8f8f8f] text-base md:text-lg">
+            &copy; 2026
+            <span class="text-[#D4AF37]">Luxe Events</span>.
+            All rights reserved.
+        </p>
+    </div>
+</footer>               
+
+
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@4.0.1/dist/flowbite.min.js"></script>
+</body>
+</html>
