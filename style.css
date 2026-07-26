@@ -902,7 +902,7 @@ select{
 
 .service-card:hover .service-icon{
     color:#111;
-    transform:rotate(10deg) scale(1.08);
+    /* transform:rotate(10deg) scale(1.08); */
 }
 
 /* Title */
